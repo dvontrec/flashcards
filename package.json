@@ -1,0 +1,22 @@
+{
+  "name": "flashcards",
+  "version": "1.0.0",
+  "description": "Flashcard app using express",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dvontrec/js-flashcards.git"
+  },
+  "author": "Dvontre Coleman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dvontrec/js-flashcards/issues"
+  },
+  "homepage": "https://github.com/dvontrec/js-flashcards#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
