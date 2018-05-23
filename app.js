@@ -3,6 +3,7 @@ const express = require("express");
 
 const app = express();
 
+
 //sets the app to set the template engine to pug.  uses the"Views dir to find templates"
 app.set('view engine', 'pug');
 
@@ -12,9 +13,11 @@ app.get("/", (req, res) =>
     res.render("index");
 })
 
-app.get("/hello", (req, res) =>
+//get the flashcard route
+app.get("/cards", (req, res) =>
 {
-    res.send("hello, this works too!");
+    //renders the card template and passes in an object with key-value pairs
+    res.render("card", {prompt: "Whos that pokemon"});
 })
 //sets up the server to listen on the port
 app.listen(process.env.PORT, (req, res) =>

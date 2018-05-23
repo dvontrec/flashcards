@@ -6,6 +6,11 @@ html(lang="en")
     header
       h1 Flash Cards
     section#content
-      h2 Welcome, student!
+      h2= prompt
+      //   creates a conditional in pug
+      
+      if hint
+        p
+          i Hint: #{hint}
     footer
       p An app to help you study
