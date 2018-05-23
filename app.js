@@ -3,10 +3,13 @@ const express = require("express");
 
 const app = express();
 
+//sets the app to set the template engine to pug.  uses the"Views dir to find templates"
+app.set('view engine', 'pug');
+
 //get the sites route route
 app.get("/", (req, res) =>
 {
-    res.send("<h1>This is working<h1>");
+    res.render("index");
 })
 
 app.get("/hello", (req, res) =>
