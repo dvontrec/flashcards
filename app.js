@@ -19,6 +19,11 @@ app.get("/cards", (req, res) =>
     //renders the card template and passes in an object with key-value pairs
     res.render("card", {prompt: "Whos that pokemon"});
 })
+
+app.get("/hello", (req, res) =>
+{
+    res.render('hello');
+})
 //sets up the server to listen on the port
 app.listen(process.env.PORT, (req, res) =>
 {
