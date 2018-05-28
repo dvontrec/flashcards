@@ -1,8 +1,12 @@
 //saves variable to access methods and properties of the express module
 const express = require("express");
+//saves a variable to access the request body using body-parser
+const bodyParser = require("body-parser");
 
 const app = express();
 
+//uses body parsers url encoder to encode data from forms
+app.use(bodyParser.urlencoded({extended:false}));
 
 //sets the app to set the template engine to pug.  uses the"Views dir to find templates"
 app.set('view engine', 'pug');
