@@ -15,19 +15,25 @@ app.set('view engine', 'pug');
 app.get("/", (req, res) =>
 {
     res.render("index");
-})
+});
 
 //get the flashcard route
 app.get("/cards", (req, res) =>
 {
     //renders the card template and passes in an object with key-value pairs
     res.render("card", {prompt: "Whos that pokemon"});
-})
+});
 
 app.get("/hello", (req, res) =>
 {
     res.render('hello');
-})
+});
+
+app.post("/hello", (req, res) =>
+{
+    res.render('hello', {name: req.body.username});
+});
+
 //sets up the server to listen on the port
 app.listen(process.env.PORT, (req, res) =>
 {
